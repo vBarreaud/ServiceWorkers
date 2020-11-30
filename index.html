@@ -4,7 +4,7 @@
 </head>
 <body>
 <H1>TP Service Workers</H1>
-<canvas>
+<canvas width=800 height=600>
     <div class="txtStyle">STROKE-ON CANVAS</div>
 </canvas>
 
@@ -18,7 +18,7 @@ ctx.lineWidth = 5; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
 ctx.strokeStyle = ctx.fillStyle = "#1f2f90";
 
 (function loop() {
-  ctx.clearRect(x, 0, 60, 150);
+  ctx.clearRect(x, 0, 800, 600);
   ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
   dashOffset -= speed;                                         // reduce dash length
   ctx.strokeText(txt[i], x, 90);                               // stroke letter
